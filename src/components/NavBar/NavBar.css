@@ -1,0 +1,23 @@
+.NavBarContainer{
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 0 0 0; */
+    color: #33928C;
+}
+
+img{
+    height: 50px;
+    margin-left: 40px;
+    padding: 10px 0 0 0;
+}
+
+
+.userProfile {
+    margin-right: 40px;
+    /* color: #33928C; */
+}
+
+/* how to implement sass> and why do so in the first place - global vars, nesting, ....
+best practices */
