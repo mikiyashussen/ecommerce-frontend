@@ -1,0 +1,45 @@
+.categoriesContaier{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .catergoriesTitle{
+        font-size: 2em;
+        font-weight: 500;
+        color: #33928C;
+        text-align: left;
+        padding-left: 3em;
+    }
+    
+}
+
+
+
+.catergoriesWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 10px;
+    justify-content: center;
+    // padding: 0.5em 4em 3em 4em;
+
+    .singleCategory{
+        margin: 1em;
+        height: 7em;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+
+
+.singleCategory:hover{
+
+}

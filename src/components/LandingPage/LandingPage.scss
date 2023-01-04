@@ -1,8 +1,8 @@
 .landingPageContainer{
-    background-image: linear-gradient(to bottom, rgba(15, 20, 50, 0.52), rgba(98, 107, 111, 0.73)),
+    background-image: linear-gradient(to bottom, rgba(15, 20, 50, 0.3), rgba(98, 107, 111, 0.3)),
     url(../../images/landingPage2.jpg); 
-    height: 93vh;
-    width: 100vw;
+    height: 80vh;
+    /* width: 100vw; */
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +15,7 @@
     padding: 0;
     position: absolute;
     left: 20%;
-    top: 35%;
+    top: 30%;
     text-align: left;
     color: #ffffff;
 }
@@ -30,4 +30,18 @@
 
 #brandStatement{
     font-size: 1.2em;
+}
+
+.landingPageButton{
+    width: 15em;
+    padding: 1em;
+    background-color: #33928C;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.landingPageButton:hover{
+    background-color: #166862;
+    
 }

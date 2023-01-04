@@ -11,7 +11,7 @@ const NavBar = () => {
         <div><img src={logo} alt='htshop-logo'/></div>
         <div>
             <input placeholder='search for a product'
-             style={{'width': '30rem', 'height': '2em', 'border': 'none'}}/>
+             style={{ 'height': '2em', 'border': 'none'}}/>
         </div>
         <div className='userProfile'>userprofile</div>
     </div>
