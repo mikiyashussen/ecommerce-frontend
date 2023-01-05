@@ -1,4 +1,6 @@
-import React from 'react'
+import { Fragment } from 'react';
+
+import { Outlet, Link } from 'react-router-dom';
 
 import './NavBar.css'
 
@@ -7,14 +9,22 @@ import logo from '../../images/logo.jpg'
 
 const NavBar = () => {
   return (
-    <div className='NavBarContainer'>
-        <div><img src={logo} alt='htshop-logo'/></div>
+    <Fragment>
+      <div className='NavBarContainer'>
+        <Link to={'/'}>
+          <img src={logo} alt='htshop-logo'/>
+        </Link>
         <div>
             <input placeholder='search for a product'
              style={{ 'height': '2em', 'border': 'none'}}/>
         </div>
-        <div className='userProfile'>userprofile</div>
-    </div>
+        <Link to={'/categories'}>
+          <div className='userProfile'>userprofile</div>
+        </Link>
+      </div>
+      <Outlet />
+    </Fragment>
+ 
   )
 }
 

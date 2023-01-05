@@ -1,4 +1,5 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
+
 import catergoriesList from './categoriesData';
 
 
@@ -10,13 +11,15 @@ const Categories = () => {
         <div className='catergoriesWrapper'>
             {
                 catergoriesList.map(({name, imageUrl}, index) => (
-                    <div className='singleCategory' key={name}
+                    <Link to={'/products-list'}>
+                        <div className='singleCategory' key={name}
                         style={{backgroundImage: `linear-gradient(rgba(15, 20, 50, 0.42), rgba(15, 20, 50, 0.42)),url(${imageUrl})`
                                 ,backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover'}}>
                         <div>{name}</div>
-                    </div>
+                        </div>
+                    </Link>
                 ))
             }
         </div>

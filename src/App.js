@@ -1,6 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route } from 'react-router-dom'
 // pages
 
 // components
@@ -12,10 +10,13 @@ import ProductsList from './pages/ProductsList/ProductsList';
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <LandingPage />
-      <Categories />
-      <ProductsList />
+      <Routes>
+        <Route path='/' element={<NavBar />}>
+          <Route index element={<LandingPage />}/>
+          <Route path='categories'  element={<Categories />}/>
+          <Route path='products-list'  element={<ProductsList />}/>
+        </Route>
+      </Routes>
     </div>
   );
 }
