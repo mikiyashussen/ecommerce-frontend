@@ -1,0 +1,31 @@
+.imageSliderContainer{
+    // background-color: black;
+    border-radius: 20px;
+    position: relative;
+}
+
+.sliderImage{
+    height: 30em;
+    // width: 30em;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imageSliderButton{
+    background-color: aquamarine;
+    border: none;
+}
+
+#prevBtn {
+    position: absolute;
+    left: 3%;
+    top: 40%
+}
+
+#nextBtn {
+    position: absolute;
+    right: 3%;
+    top: 40%
+}

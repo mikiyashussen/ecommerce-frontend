@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import { Outlet, Link } from 'react-router-dom';
 
-import './NavBar.css'
+import './NavBar.scss'
 
 //image
 import logo from '../../images/logo.jpg'

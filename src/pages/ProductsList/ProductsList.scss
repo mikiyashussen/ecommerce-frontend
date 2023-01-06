@@ -1,22 +1,23 @@
 .ProductsListPage{
     display: grid;
     // background-color: aquamarine;
-    grid-template-columns: 1fr 4fr;
-    padding: 2em;
+    grid-template-columns: 1fr 7fr;
+    padding: 2em 1em 2em 2em;
     // background-color: #F9F9F9;
+    
 }
 
 
 .productsListContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
-    gap: 5em;
-    padding: 1em;
-    margin-left: 3em;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 15rem));
+    gap: 2em;
     .singleProduct {
         padding: 0;
-        margin: 0.7em;
-        width: 18em;
+        // padding-right: 0.5em;
+        // margin: 0.7em;
+        width: 16em;
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         display: grid;
@@ -44,14 +45,17 @@
             }
         }
 
+        a{
+            text-decoration: none;
+        }
         .buyNow{
             background-color: transparent;
-            border: 2px solid #33928C;
+            border: .18px solid #33928C;
             border-radius: 80px;
             color:  #33928C;
             cursor: pointer;
             font-weight: bold;
-            padding: 0.6em;
+            padding: 0.3em;
             // margin: 1em 13em 2em 1em;
             margin: 0.4em 2em 2em 2em;
         }

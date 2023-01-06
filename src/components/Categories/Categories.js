@@ -17,7 +17,7 @@ const Categories = () => {
                                 ,backgroundRepeat: 'no-repeat',
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover'}}>
-                        <div>{name}</div>
+                            <div>{name}</div>
                         </div>
                     </Link>
                 ))

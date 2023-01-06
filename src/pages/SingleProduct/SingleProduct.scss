@@ -1,0 +1,38 @@
+.productDescContainer{
+    // background-color: aqua;
+    display: grid;
+    // justify-content: space-evenly;
+    // grid-template-columns: 5fr 3fr;
+    padding: 2em;
+    gap: 2em;
+
+    // small tablet styles and above
+    @media screen and (min-width: 750px) {
+        grid-template-columns: 5fr 3fr;
+    }
+}
+
+
+
+
+// large tables & laptop styles
+@media screen and (min-width: 960px){
+
+}
+
+// Desktop styles
+@media  screen and (min-width: 1200px) {
+    
+}
+
+
+
+.productDescLeft{
+    
+    width: 60%;
+}
+
+.mainProductDetails{
+    border: 1px solid black;
+    width: 30%;
+}

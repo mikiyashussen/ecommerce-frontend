@@ -1,0 +1,45 @@
+import { useState } from 'react'
+
+import singleProductData from '../../pages/SingleProduct/singleProductData';
+
+import './ImageSlider.scss';
+const arr = [1,2,3,4,5]
+const ImageSlider = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextSlide = () => {
+        console.log('first',currentIndex)
+        if(currentIndex === arr.length - 1 ){
+            setCurrentIndex(0);
+        }
+        else {
+            setCurrentIndex(currentIndex+1);
+        }
+        console.log('after change', currentIndex)
+        return    
+    }
+
+    const prevSlide = () => {
+        if(currentIndex === 0 ){
+            setCurrentIndex(arr.length-1);
+        }
+        else {
+            setCurrentIndex(currentIndex-1);
+        }
+        return    
+    }
+    return (
+    <div className='imageSliderContainer'>
+        <div className='carousalContainer'>
+            {singleProductData.map(({imageUrl, name}, index) => (
+               (index == currentIndex) ? <div className='sliderImage' key={name}
+               style={{backgroundImage: `url(${imageUrl})`}}> </div> : ''
+            ))}
+        </div>
+        <button className='imageSliderButton' id='prevBtn' onClick={prevSlide}>Prev</button>
+        <button className='imageSliderButton' id='nextBtn' onClick={nextSlide}>Next</button>
+    </div>
+  )
+}
+
+export default ImageSlider;

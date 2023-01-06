@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import image from '../../images/landingPage.jpg';
 import phones from './sampleProductList';
+
 
 import './ProductsList.scss';
 
 
 const ProductsList = () => {
   return (
-    <div>
       <div className='ProductsListPage'>
           <div>
             Filter
@@ -30,14 +31,15 @@ const ProductsList = () => {
                       </div>
                       <h3>${price}</h3>
                     </div>
-                    <button className='buyNow'>View Product </button>
+                    <Link to='/categories/categoryname/item-id'>
+                      <div className='buyNow'>View Product </div>
+                    </Link>
                   </div>
               )
               )
               }
           </div>
       </div>
-    </div>
   )
 }
 
