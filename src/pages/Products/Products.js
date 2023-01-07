@@ -1,13 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import image from '../../images/landingPage.jpg';
 import phones from './sampleProductList';
 
 
-import './ProductsList.scss';
+
+import './Products.scss';
 
 
 const ProductsList = () => {
+
+  const location = useLocation();
+  console.log(location)
   return (
       <div className='ProductsListPage'>
           <div>
@@ -31,7 +35,7 @@ const ProductsList = () => {
                       </div>
                       <h3>${price}</h3>
                     </div>
-                    <Link to='/categories/categoryname/item-id'>
+                    <Link to={`${location.pathname}/${name}`}>
                       <div className='buyNow'>View Product </div>
                     </Link>
                   </div>

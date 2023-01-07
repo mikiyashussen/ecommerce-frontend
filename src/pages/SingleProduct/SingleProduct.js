@@ -1,9 +1,10 @@
-import React from 'react'
+import { useState } from 'react';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
-
+import singleProductData from './singleProductData'
 import './SingleProduct.scss'
 
 const SingleProduct = () => {
+    const [quantity, setQuantity] = useState(1);
   return (
     <div>
         <div className='productDescContainer'>
@@ -11,7 +12,20 @@ const SingleProduct = () => {
                     <ImageSlider />
                 </div>
                 <div className='mainProductDetails'>
-                name
+                    <h3>{singleProductData[0].name}</h3>
+                    <div>{singleProductData[0].ram}</div>
+                    <h2>${singleProductData[0].price}</h2>
+                    <div>Delivery date</div>
+                    <div>flexible value-e.g storage</div>
+                    <div className='quantityContainer'>
+                        <div onClick={() => setQuantity(quantity-1)}>-</div>
+                        <div>{quantity}</div>
+                        <div onClick={() => setQuantity(quantity+1 )}>+</div>
+                    </div>
+                    <div className='signleProductButtonsContainer'>
+                        <button>Buy now</button>
+                        <button>Add to Cart</button>
+                    </div>
                 </div>
                 <div className='detailedProductDesc'>
                 Lorem Ipsum is simply dummy text of the printing and 
