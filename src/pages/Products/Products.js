@@ -36,7 +36,7 @@ const ProductsList = () => {
                       <h3>${price}</h3>
                     </div>
                     <Link to={`${location.pathname}/${name}`}>
-                      <div className='buyNow'>View Product </div>
+                      <div className='viewProduct'>View Product </div>
                     </Link>
                   </div>
               )

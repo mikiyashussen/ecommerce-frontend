@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
 import singleProductData from './singleProductData'
 import './SingleProduct.scss'
@@ -23,7 +24,9 @@ const SingleProduct = () => {
                         <div onClick={() => setQuantity(quantity+1 )}>+</div>
                     </div>
                     <div className='signleProductButtonsContainer'>
-                        <button>Buy now</button>
+                        <Link to='/categories'>
+                         <button>Buy now</button>
+                        </Link>
                         <button>Add to Cart</button>
                     </div>
                 </div>

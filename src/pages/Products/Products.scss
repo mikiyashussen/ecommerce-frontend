@@ -3,7 +3,7 @@
     // background-color: aquamarine;
     grid-template-columns: 1fr 7fr;
     padding: 2em 1em 2em 2em;
-    // background-color: #F9F9F9;
+    background-color: #F9F9F9;
     
 }
 
@@ -25,7 +25,7 @@
        
 
         .productImage{
-            height: 14em;
+            height: 9em;
             width: 100%;
             object-fit: cover;
             margin: 0;
@@ -48,9 +48,9 @@
         a{
             text-decoration: none;
         }
-        .buyNow{
+        .viewProduct{
             background-color: transparent;
-            border: .18px solid #33928C;
+            border: 1.5px solid #33928C;
             border-radius: 80px;
             color:  #33928C;
             cursor: pointer;
@@ -60,7 +60,7 @@
             margin: 0.4em 2em 2em 2em;
         }
 
-        .buyNow:hover{
+        .viewProduct:hover{
             background-color: #33928C;
             color: #ffffff;
         }
