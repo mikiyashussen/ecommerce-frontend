@@ -11,7 +11,7 @@
     
 }
 
-.landingPageBrandText{
+.landingPageBrandText{  
     margin: 0;
     padding: 0;
     position: absolute;
@@ -22,11 +22,15 @@
 }
 
 #habeshaTechShop {
-    font-size: 5em;
-    font-weight: 00;
+    font-weight: 700;
     letter-spacing: 5px;
     padding: 0;
     margin: 0;
+    font-size: 3em;
+    @media screen and (min-width: 750px) {
+        font-size: 5em;
+    }
+    
 }
 
 #brandStatement{

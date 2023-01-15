@@ -4,6 +4,13 @@ $font-color: #30514F;
 .App {
   text-align: center;
   // width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 0 auto;
+  height: 100vh;
+  // min-height: 100%;
+  // position:relative;
+  
 }
 
