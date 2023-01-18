@@ -1,4 +1,4 @@
-
+import { useDispatch, useSelector } from 'react-redux'
 import './Cart.scss'
 const cartObj = [{
     name: 'iPhone 13 Pro Max',
@@ -13,19 +13,22 @@ const cartObj = [{
 
 
 const Cart = () => {
+    const itemsInCart = useSelector(state => state.productsInCart)
+    console.log(itemsInCart)
   return (
     <div>
         <p className='pageHeaders'>Shoping Cart 2items</p>
         <div className='cartContainer'>
-            
             <div  className='oderListContainer'>
-                {cartObj.map((item, index) => (
-                    <div className='singleOrder'>
+                {itemsInCart.map((item, index) => (
+                    <div key={item.name} className='singleOrder'>
                         <div className='orderImageContainer' style={{backgroundImage: `url(${item.imageUrl})`}}></div>
                         <div className='productDetials'>
                             <h3>{item.name}</h3>
-                            <p>{item.imptDetails}</p>
+                            <p>{item.ram}{item.storage}</p>
                         </div>
+                        <h3>{item.quantity}</h3>
+                        <div>delete from cart</div>
                     </div>
                 ))}
             </div>

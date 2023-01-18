@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { connect } from 'react-redux';
 // pages
 
 // components
@@ -11,10 +12,13 @@ import Cart from './pages/Cart/Cart';
 import Payment from './pages/Payment/Payment';
 import Footer from './components/Footer/Footer';
 
-
+//actions
+import { addToCart } from './actions';
 
 import './App.scss'
 function App() {
+
+
   return (
     <div className="App">
       <Routes>
@@ -32,4 +36,6 @@ function App() {
   );
 }
 
-export default App;
+
+
+export default connect()(App);

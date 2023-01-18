@@ -1,13 +1,19 @@
 import { Fragment } from 'react';
-
 import { Outlet, Link } from 'react-router-dom';
-
+import { connect } from 'react-redux';
 import './NavBar.scss'
 
 //image
 import logo from '../../images/logo.jpg'
 
-const NavBar = () => {
+const mapStateToProps = state => {
+  return {
+    item: state.quantityOfItemsInCart
+  }
+}
+
+
+const NavBar = ({item}) => {
   return (
     <Fragment>
       <div className='NavBarContainer'>
@@ -18,8 +24,8 @@ const NavBar = () => {
             <input placeholder='search for a product'
              style={{ 'height': '2em', 'border': 'none'}}/>
         </div>
-        <Link to={'/categories'}>
-          <div className='userProfile'>userprofile</div>
+        <Link to={'/cart'}>
+          <div className='userProfile'>{item}</div>
         </Link>
       </div>
       <Outlet />
@@ -28,4 +34,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default connect(mapStateToProps)(NavBar)
