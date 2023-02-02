@@ -38,7 +38,8 @@ const SingleProduct = () => {
 
 
   const onAddToCart = () => {
-      // addToCart
+      // the items should be added to database as well and on user login
+      // should be fetched and stored to the store
       productDetails['quantity'] = quantity;
       dispatch(addToCart(quantity, productDetails))
       // cart(quantity)

@@ -14,6 +14,8 @@ const cartObj = [{
 
 const Cart = () => {
     const itemsInCart = useSelector(state => state.productsInCart)
+
+    // get cart items should be fetched here
     console.log(itemsInCart)
   return (
     <div>

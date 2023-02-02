@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 // pages
 
 // components
+import SignIn from './pages/SignIn/SignIn';
+import Register from './pages/Register/Register';
 import NavBar from './components/NavBar/NavBar';
 import LandingPage from './components/LandingPage/LandingPage';
 import Categories from './components/Categories/Categories';
@@ -23,6 +25,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<NavBar />}>
+          <Route path='signin' element={<SignIn />}/>
+          <Route path='register' element={<Register />}/>
           <Route index element={<LandingPage />}/>
           <Route exact path='categories'  element={<Categories />}/>
           <Route exact path={'categories/:category'}  element={<Products />}/>
